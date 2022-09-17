@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>card</title>
+    <link rel="stylesheet" href="card.css">
+</head>
+
+<body>
+    <div id="dark-light">
+        <!-- <span class="material-icons indicator">
+            dark_mode
+            </span> -->
+        <i class="indicator"></i>
+    </div>
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <h2>01</h2>
+                <img src="https://media-exp1.licdn.com/dms/image/C4D03AQHU1NQrJNDC7w/profile-displayphoto-shrink_800_800/0/1662411229059?e=1668643200&v=beta&t=BRID7QXeMK7EITtmjajuNbyOovd2xJ-rQH7JduVB-No"
+                    width="100px" alt="">
+                <h3>Cindel Sousa</h3>
+                <p>UX/UI designer and frontend developer</p>
+                <a href="https://www.youtube.com/watch?v=hv0rNxr1XXk" target="_blank">Leia mais...</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <img src="https://pps.whatsapp.net/v/t61.24694-24/240279380_911498826394035_2759983819574224103_n.jpg?ccb=11-4&oh=01_AVwCyD_8aDI_2POeTOgMOZDWI2wO7WPrh-foWS3Tn6K4cg&oe=6336CC3B"
+                    width="100px" alt="">
+                <h2>02</h2>
+                <h3>Beca Dutra</h3>
+                <p>Designer and Social Media</p>
+                <a href="https://www.youtube.com/watch?v=hv0rNxr1XXk" target="_blank">Leia mais...</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="content">
+                <img src="https://media-exp1.licdn.com/dms/image/C4D03AQETNL96OuifYg/profile-displayphoto-shrink_800_800/0/1661907248308?e=1668643200&v=beta&t=H0Gv9hh2BeNaGr9LTqGGTT4WWYNax83QbHtjKb5dXz0"
+                    width="100px" alt="">
+                <h2>03</h2>
+                <h3>Tauane Matos</h3>
+                <p>Full Stack Developer and Desenvolvedora Web</p>
+                <a href="https://www.youtube.com/watch?v=hv0rNxr1XXk" target="_blank">Leia mais...</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const body = document.querySelector('body')
+        const numeros = document.querySelectorAll('h2')
+        const nomes = document.querySelectorAll('h3')
+        const descs = document.querySelectorAll('p')
+        const links = document.querySelectorAll('a')
+        const toggle = document.getElementById('dark-light')
+        toggle.onclick = function () {
+            toggle.classList.toggle('active')
+            body.classList.toggle('active')
+            numeros.forEach(numero => numero.classList.toggle('active'))
+            nomes.forEach(nome => nome.classList.toggle('active'))
+            descs.forEach(desc => desc.classList.toggle('active'))
+            links.forEach(link => link.classList.toggle('active'))
+        }
+    </script>
+
+
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+    </script>
+</body>
+
+</html>
