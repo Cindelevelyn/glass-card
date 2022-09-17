@@ -13,10 +13,14 @@
 
 <body>
     <div id="dark-light">
-        <!-- <span class="material-icons indicator">
+        <span class="material-icons indicator dark">
             dark_mode
-            </span> -->
-        <i class="indicator"></i>
+            </span>
+        <span class="material-icons indicator light">
+            light_mode
+        </span>
+            
+        <!-- <i class="indicator"></i> -->
     </div>
     <div class="container">
         <div class="card">
@@ -58,6 +62,8 @@
         const descs = document.querySelectorAll('p')
         const links = document.querySelectorAll('a')
         const toggle = document.getElementById('dark-light')
+
+
         toggle.onclick = function () {
             toggle.classList.toggle('active')
             body.classList.toggle('active')
